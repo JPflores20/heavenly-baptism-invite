@@ -12,7 +12,7 @@ import {
   Footer,
 } from "@/components/baptism";
 
-// Placeholder baby photos using unsplash
+// Fotos de ejemplo (puedes cambiarlas por las reales)
 const placeholderPhotos = [
   "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=600&h=600&fit=crop",
   "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=600&h=600&fit=crop",
@@ -22,22 +22,22 @@ const placeholderPhotos = [
   "https://images.unsplash.com/photo-1566004100631-35d015d6a491?w=600&h=600&fit=crop",
 ];
 
-// Placeholder data - replace with actual details
+// Datos del Bautizo - Traducidos al Español
 const baptismData = {
-  babyName: "Sofia Grace",
-  date: "Sunday, March 15, 2026",
+  babyName: "Sofía Grace", // Puedes poner solo Sofía si prefieres
+  date: "Domingo, 15 de Marzo de 2026",
   targetDate: new Date("2026-03-15T11:00:00"),
   
   church: {
-    name: "St. Mary's Cathedral",
-    address: "123 Cathedral Street, Downtown, City 12345",
+    name: "Catedral de Santa María",
+    address: "Calle Catedral 123, Centro, Ciudad",
     time: "11:00 AM",
     mapsUrl: "https://maps.google.com",
   },
   
   reception: {
-    name: "The Garden Pavilion",
-    address: "456 Garden Avenue, Riverside, City 12345",
+    name: "Jardín El Pabellón",
+    address: "Av. Jardines 456, Ribera, Ciudad",
     time: "1:00 PM",
     mapsUrl: "https://maps.google.com",
   },
@@ -46,86 +46,86 @@ const baptismData = {
     condition: "sunny" as const,
     temperature: 22,
     temperatureUnit: "C" as const,
-    description: "Partly cloudy with sunshine",
-    date: "March 15, 2026",
+    description: "Soleado con algunas nubes",
+    date: "15 de Marzo, 2026",
   },
   
   itinerary: [
     {
       time: "11:00 AM",
-      title: "Holy Baptism Ceremony",
-      description: "The sacred ceremony at St. Mary's Cathedral",
+      title: "Ceremonia Religiosa",
+      description: "La sagrada ceremonia en la Catedral de Santa María",
       icon: "ceremony" as const,
     },
     {
       time: "12:00 PM",
-      title: "Photo Session",
-      description: "Capture beautiful moments with family",
+      title: "Sesión de Fotos",
+      description: "Capturando momentos hermosos en familia",
       icon: "photos" as const,
     },
     {
       time: "1:00 PM",
-      title: "Celebration Lunch",
-      description: "Join us for a joyful celebration at The Garden Pavilion",
+      title: "Recepción y Comida",
+      description: "Acompáñanos a celebrar en el Jardín El Pabellón",
       icon: "lunch" as const,
     },
     {
       time: "3:00 PM",
-      title: "Cake & Blessings",
-      description: "Special moment with our little angel",
+      title: "Pastel y Bendiciones",
+      description: "Un momento especial con nuestro angelito",
       icon: "blessing" as const,
     },
   ],
   
   godparents: [
-    { name: "Maria Elena Rodriguez", role: "Godmother" as const },
-    { name: "James Michael Thompson", role: "Godfather" as const },
+    { name: "Maria Elena Rodriguez", role: "Madrina" as const }, // Role cambiado a español manualmente si es necesario, o manejado en el componente
+    { name: "James Michael Thompson", role: "Padrino" as const },
   ],
 };
 
 const BaptismInvite = () => {
   return (
     <div className="min-h-screen bg-background relative">
-      {/* Floating background clouds */}
+      {/* Nubes flotantes de fondo */}
       <FloatingClouds />
       
-      {/* Music Player */}
+      {/* Reproductor de Música */}
       <MusicPlayer />
       
-      {/* Hero Section */}
+      {/* Sección Principal */}
       <HeroSection
         babyName={baptismData.babyName}
         date={baptismData.date}
       />
       
-      {/* Countdown Timer */}
+      {/* Cuenta Regresiva */}
       <CountdownTimer targetDate={baptismData.targetDate} />
       
-      {/* Location Cards */}
+      {/* Tarjetas de Ubicación */}
       <LocationCards
         church={baptismData.church}
         reception={baptismData.reception}
       />
       
-      {/* Weather Section */}
+      {/* Sección del Clima */}
       <WeatherSection weather={baptismData.weather} />
       
-      {/* Itinerary Timeline */}
+      {/* Itinerario */}
       <Itinerary events={baptismData.itinerary} />
       
-      {/* Photo Gallery */}
+      {/* Galería de Fotos */}
       <PhotoGallery photos={placeholderPhotos} />
       
-      {/* Godparents & Gifts */}
+      {/* Padrinos y Regalos */}
       <GiftsSection
         godparents={baptismData.godparents}
-        message="Your presence is the greatest gift of all. However, if you wish to bless Sofia with a gift, she would love books, toys, or contributions to her college fund."
+        message="Su presencia es el mejor regalo de todos. Sin embargo, si desean tener un detalle con Sofía, ella agradecería mucho juguetes didácticos o ropa."
       />
       
-      {/* RSVP Form */}
+      {/* Formulario de Confirmación */}
       <RSVPForm />
       
-      {/* Footer */}
+      {/* Pie de página */}
       <Footer
         babyName={baptismData.babyName}
         date={baptismData.date}

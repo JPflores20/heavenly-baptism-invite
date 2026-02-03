@@ -13,13 +13,13 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
 
 const rsvpSchema = z.object({
-  name: z.string().trim().min(1, "Please enter your name").max(100, "Name is too long"),
-  email: z.string().trim().email("Please enter a valid email").max(255, "Email is too long"),
+  name: z.string().trim().min(1, "Por favor ingresa tu nombre").max(100, "El nombre es muy largo"),
+  email: z.string().trim().email("Por favor ingresa un email válido").max(255, "El email es muy largo"),
   attendance: z.enum(["attending", "not-attending"], {
-    required_error: "Please select your attendance",
+    required_error: "Por favor selecciona si asistirás",
   }),
   guests: z.string().optional(),
-  message: z.string().max(500, "Message is too long").optional(),
+  message: z.string().max(500, "El mensaje es muy largo").optional(),
 });
 
 type RSVPFormData = z.infer<typeof rsvpSchema>;
@@ -51,8 +51,8 @@ export const RSVPForm = () => {
     console.log("RSVP submitted:", data);
     setIsSubmitted(true);
     toast({
-      title: "RSVP Received! 💌",
-      description: "Thank you for letting us know. We look forward to seeing you!",
+      title: "¡Confirmación Recibida! 💌",
+      description: "Gracias por avisarnos. ¡Esperamos verte pronto!",
     });
   };
 
@@ -67,10 +67,10 @@ export const RSVPForm = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl md:text-3xl font-serif text-charcoal mb-4">
-            RSVP
+            Confirmar Asistencia
           </h2>
           <p className="text-muted-foreground">
-            Please let us know if you can make it
+            Por favor déjanos saber si podrás acompañarnos
           </p>
         </motion.div>
 
@@ -94,10 +94,10 @@ export const RSVPForm = () => {
                     <Check className="w-10 h-10 text-charcoal" />
                   </motion.div>
                   <h3 className="text-2xl font-serif text-charcoal mb-3">
-                    Thank You!
+                    ¡Gracias!
                   </h3>
                   <p className="text-muted-foreground">
-                    Your response has been recorded. We can't wait to celebrate with you!
+                    Tu respuesta ha sido registrada. ¡No podemos esperar a celebrar contigo!
                   </p>
                 </CardContent>
               </Card>
@@ -114,7 +114,7 @@ export const RSVPForm = () => {
               <Card className="bg-card border-border shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-center font-serif text-charcoal">
-                    Will you join us?
+                    ¿Nos acompañarás?
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -123,11 +123,11 @@ export const RSVPForm = () => {
                     <div className="space-y-2">
                       <Label htmlFor="name" className="flex items-center gap-2 text-charcoal">
                         <User className="w-4 h-4 text-silver" />
-                        Your Name
+                        Nombre Completo
                       </Label>
                       <Input
                         id="name"
-                        placeholder="Enter your full name"
+                        placeholder="Ingresa tu nombre"
                         className="rounded-xl border-input focus:border-sky-deep"
                         {...register("name")}
                       />
@@ -140,12 +140,12 @@ export const RSVPForm = () => {
                     <div className="space-y-2">
                       <Label htmlFor="email" className="flex items-center gap-2 text-charcoal">
                         <Send className="w-4 h-4 text-silver" />
-                        Email Address
+                        Correo Electrónico
                       </Label>
                       <Input
                         id="email"
                         type="email"
-                        placeholder="your.email@example.com"
+                        placeholder="tu.correo@ejemplo.com"
                         className="rounded-xl border-input focus:border-sky-deep"
                         {...register("email")}
                       />
@@ -156,7 +156,7 @@ export const RSVPForm = () => {
 
                     {/* Attendance */}
                     <div className="space-y-3">
-                      <Label className="text-charcoal">Will you attend?</Label>
+                      <Label className="text-charcoal">¿Asistirás?</Label>
                       <RadioGroup
                         value={attendance}
                         onValueChange={(value) => setValue("attendance", value as "attending" | "not-attending")}
@@ -165,13 +165,13 @@ export const RSVPForm = () => {
                         <div className="flex items-center space-x-3">
                           <RadioGroupItem value="attending" id="attending" />
                           <Label htmlFor="attending" className="cursor-pointer text-charcoal">
-                            Yes, I'll be there! 🎉
+                            ¡Sí, ahí estaré! 🎉
                           </Label>
                         </div>
                         <div className="flex items-center space-x-3">
                           <RadioGroupItem value="not-attending" id="not-attending" />
                           <Label htmlFor="not-attending" className="cursor-pointer text-charcoal">
-                            Sorry, I can't make it 😢
+                            Lo siento, no podré asistir 😢
                           </Label>
                         </div>
                       </RadioGroup>
@@ -190,7 +190,7 @@ export const RSVPForm = () => {
                       >
                         <Label htmlFor="guests" className="flex items-center gap-2 text-charcoal">
                           <Users className="w-4 h-4 text-silver" />
-                          Number of Guests
+                          Número de Personas
                         </Label>
                         <Input
                           id="guests"
@@ -208,11 +208,11 @@ export const RSVPForm = () => {
                     <div className="space-y-2">
                       <Label htmlFor="message" className="flex items-center gap-2 text-charcoal">
                         <MessageSquare className="w-4 h-4 text-silver" />
-                        Message (Optional)
+                        Mensaje (Opcional)
                       </Label>
                       <Textarea
                         id="message"
-                        placeholder="Any dietary restrictions or special messages..."
+                        placeholder="Restricciones alimenticias o algún mensaje especial..."
                         className="rounded-xl border-input focus:border-sky-deep min-h-[100px]"
                         {...register("message")}
                       />
@@ -235,7 +235,7 @@ export const RSVPForm = () => {
                         />
                       ) : (
                         <>
-                          Send RSVP
+                          Enviar Confirmación
                           <Send className="w-4 h-4 ml-2" />
                         </>
                       )}

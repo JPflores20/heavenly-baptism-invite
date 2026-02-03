@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 interface Godparent {
   name: string;
-  role: "Godmother" | "Godfather";
+  role: "Madrina" | "Padrino" | "Godmother" | "Godfather";
 }
 
 interface GiftsSectionProps {
@@ -23,9 +23,9 @@ const DoveDecor = () => (
 
 export const GiftsSection = ({ 
   godparents, 
-  message = "Your presence is the greatest gift. However, if you wish to bless our little one with a gift, here are some ideas.",
+  message = "Su presencia es el mejor regalo. Sin embargo, si desean tener un detalle con nuestro pequeño, aquí hay algunas ideas.",
   registryUrl,
-  registryName = "Gift Registry"
+  registryName = "Mesa de Regalos"
 }: GiftsSectionProps) => {
   return (
     <section className="py-16 md:py-24 px-6 bg-gradient-to-b from-background to-primary/20">
@@ -38,7 +38,7 @@ export const GiftsSection = ({
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl md:text-3xl font-serif text-charcoal mb-4">
-            Godparents & Gifts
+            Padrinos y Regalos
           </h2>
           <div className="flex items-center justify-center gap-3 mb-4">
             <DoveDecor />

@@ -44,10 +44,10 @@ export const WeatherSection = ({ weather }: WeatherSectionProps) => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl md:text-3xl font-serif text-charcoal mb-4">
-            Weather Forecast
+            Pronóstico del Clima
           </h2>
           <p className="text-muted-foreground">
-            Plan your attire for the day
+            Para que prepares tu vestimenta
           </p>
         </motion.div>
 
@@ -87,11 +87,11 @@ export const WeatherSection = ({ weather }: WeatherSectionProps) => {
               {/* Suggestion */}
               <div className="mt-6 pt-6 border-t border-border/50 text-center">
                 <p className="text-sm text-muted-foreground">
-                  {weather.condition === "sunny" && "☀️ Don't forget your sunglasses and sunscreen!"}
-                  {weather.condition === "cloudy" && "⛅ A light layer might be nice for comfort."}
-                  {weather.condition === "rainy" && "🌧️ Consider bringing an umbrella just in case."}
-                  {weather.condition === "snowy" && "❄️ Bundle up warm and wear comfortable boots."}
-                  {weather.condition === "windy" && "💨 A wind-resistant layer is recommended."}
+                  {weather.condition === "sunny" && "☀️ ¡No olvides tus lentes de sol y bloqueador!"}
+                  {weather.condition === "cloudy" && "⛅ Una capa ligera de ropa podría ser cómoda."}
+                  {weather.condition === "rainy" && "🌧️ Considera traer un paraguas por si acaso."}
+                  {weather.condition === "snowy" && "❄️ Abrígate bien y usa calzado cómodo."}
+                  {weather.condition === "windy" && "💨 Se recomienda una prenda resistente al viento."}
                 </p>
               </div>
             </CardContent>

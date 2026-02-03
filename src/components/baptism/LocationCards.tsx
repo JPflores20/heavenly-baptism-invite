@@ -60,7 +60,7 @@ const LocationCard = ({
             asChild
           >
             <a href={location.mapsUrl} target="_blank" rel="noopener noreferrer">
-              View on Maps
+              Ver en Mapa
               <ExternalLink className="w-3 h-3 ml-1" />
             </a>
           </Button>
@@ -82,10 +82,10 @@ export const LocationCards = ({ church, reception }: LocationCardsProps) => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl md:text-3xl font-serif text-charcoal mb-4">
-            Venue Details
+            Ubicación y Detalles
           </h2>
           <p className="text-muted-foreground">
-            We would be honored to have you join us
+            Será un honor contar con tu compañía
           </p>
         </motion.div>
 
@@ -93,13 +93,13 @@ export const LocationCards = ({ church, reception }: LocationCardsProps) => {
           <LocationCard 
             location={church} 
             icon={Church} 
-            title="Ceremony" 
+            title="Ceremonia" 
             index={0} 
           />
           <LocationCard 
             location={reception} 
             icon={Cake} 
-            title="Celebration" 
+            title="Celebración" 
             index={1} 
           />
         </div>

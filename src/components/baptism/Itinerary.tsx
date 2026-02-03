@@ -80,10 +80,10 @@ export const Itinerary = ({ events }: ItineraryProps) => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl md:text-3xl font-serif text-charcoal mb-4">
-            Schedule of Events
+            Itinerario del Día
           </h2>
           <p className="text-muted-foreground">
-            A timeline of our special day
+            Los momentos especiales de nuestra celebración
           </p>
         </motion.div>
 

@@ -12,7 +12,7 @@ export const MusicPlayer = ({ audioUrl }: MusicPlayerProps) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Hide tooltip after 3 seconds
+    // Ocultar tooltip después de 3 segundos
     const timer = setTimeout(() => setShowTooltip(false), 3000);
     return () => clearTimeout(timer);
   }, []);
@@ -31,7 +31,7 @@ export const MusicPlayer = ({ audioUrl }: MusicPlayerProps) => {
     setIsPlaying(!isPlaying);
   };
 
-  // If no audio URL provided, show a placeholder
+  // Si no hay URL de audio, mostrar placeholder
   if (!audioUrl) {
     return (
       <motion.div
@@ -50,7 +50,7 @@ export const MusicPlayer = ({ audioUrl }: MusicPlayerProps) => {
                 className="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap"
               >
                 <span className="bg-card text-muted-foreground text-sm px-3 py-2 rounded-lg shadow-lg">
-                  🎵 Music player ready
+                  🎵 Música lista
                 </span>
               </motion.div>
             )}
@@ -58,7 +58,7 @@ export const MusicPlayer = ({ audioUrl }: MusicPlayerProps) => {
           
           <button
             className="w-14 h-14 rounded-full bg-card shadow-lg border border-border flex items-center justify-center text-silver hover:text-charcoal hover:shadow-xl transition-all duration-300"
-            aria-label="Music player placeholder"
+            aria-label="Reproductor de música de prueba"
           >
             <Music className="w-6 h-6" />
           </button>
@@ -86,7 +86,7 @@ export const MusicPlayer = ({ audioUrl }: MusicPlayerProps) => {
               className="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap"
             >
               <span className="bg-card text-muted-foreground text-sm px-3 py-2 rounded-lg shadow-lg">
-                🎵 Tap to play music
+                🎵 Toca para escuchar
               </span>
             </motion.div>
           )}
@@ -97,7 +97,7 @@ export const MusicPlayer = ({ audioUrl }: MusicPlayerProps) => {
           className="w-14 h-14 rounded-full bg-card shadow-lg border border-border flex items-center justify-center text-silver hover:text-charcoal hover:shadow-xl transition-all duration-300"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          aria-label={isPlaying ? "Pause music" : "Play music"}
+          aria-label={isPlaying ? "Pausar música" : "Reproducir música"}
         >
           {isPlaying ? (
             <Volume2 className="w-6 h-6" />
@@ -106,7 +106,7 @@ export const MusicPlayer = ({ audioUrl }: MusicPlayerProps) => {
           )}
         </motion.button>
 
-        {/* Playing animation rings */}
+        {/* Anillos de animación al reproducir */}
         {isPlaying && (
           <>
             <motion.div

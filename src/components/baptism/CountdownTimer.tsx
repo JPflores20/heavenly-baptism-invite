@@ -75,10 +75,10 @@ export const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
   }, [targetDate]);
 
   const timeUnits = [
-    { value: timeLeft.days, label: "Days" },
-    { value: timeLeft.hours, label: "Hours" },
-    { value: timeLeft.minutes, label: "Minutes" },
-    { value: timeLeft.seconds, label: "Seconds" },
+    { value: timeLeft.days, label: "Días" },
+    { value: timeLeft.hours, label: "Horas" },
+    { value: timeLeft.minutes, label: "Minutos" },
+    { value: timeLeft.seconds, label: "Segundos" },
   ];
 
   return (
@@ -91,7 +91,7 @@ export const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Counting Down to the Special Day
+          Cuenta Regresiva para el Gran Día
         </motion.h2>
         
         <motion.p
@@ -101,7 +101,7 @@ export const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Join us as we celebrate this blessed occasion
+          Acompáñanos a celebrar esta bendecida ocasión
         </motion.p>
 
         <div className="flex items-center justify-center flex-wrap gap-2 md:gap-0">

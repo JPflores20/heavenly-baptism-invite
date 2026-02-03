@@ -25,9 +25,9 @@ export const Footer = ({ babyName, date }: FooterProps) => {
         <p className="text-silver mb-6">{date}</p>
         
         <div className="flex items-center justify-center gap-2 text-muted-foreground text-sm">
-          <span>Made with</span>
+          <span>Hecho con</span>
           <Heart className="w-4 h-4 text-rose-400 fill-rose-400" />
-          <span>for our little blessing</span>
+          <span>para nuestra pequeña bendición</span>
         </div>
       </motion.div>
 

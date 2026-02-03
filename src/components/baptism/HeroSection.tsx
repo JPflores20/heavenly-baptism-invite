@@ -11,7 +11,7 @@ interface HeroSectionProps {
 export const HeroSection = ({ 
   babyName, 
   date, 
-  welcomeMessage = "You are warmly invited to celebrate the Holy Baptism of" 
+  welcomeMessage = "Estás cordialmente invitado a celebrar el Bautizo de" 
 }: HeroSectionProps) => {
   const scrollToContent = () => {
     window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
@@ -31,7 +31,7 @@ export const HeroSection = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Holy Baptism
+          Mi Bautizo
         </motion.p>
 
         <motion.p
@@ -80,7 +80,7 @@ export const HeroSection = ({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.4 }}
-        aria-label="Scroll to content"
+        aria-label="Desplazarse al contenido"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}

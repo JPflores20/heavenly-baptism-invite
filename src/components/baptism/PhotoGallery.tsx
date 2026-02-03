@@ -36,10 +36,10 @@ export const PhotoGallery = ({ photos }: PhotoGalleryProps) => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl md:text-3xl font-serif text-charcoal mb-4">
-            Precious Moments
+            Momentos Especiales
           </h2>
           <p className="text-muted-foreground">
-            A glimpse of our little angel
+            Un vistazo a la vida de nuestro angelito
           </p>
         </motion.div>
 
@@ -57,7 +57,7 @@ export const PhotoGallery = ({ photos }: PhotoGalleryProps) => {
             >
               <img
                 src={photo}
-                alt={`Baby photo ${index + 1}`}
+                alt={`Foto del bebé ${index + 1}`}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/20 transition-colors duration-300" />
@@ -115,7 +115,7 @@ export const PhotoGallery = ({ photos }: PhotoGalleryProps) => {
               <motion.img
                 key={selectedIndex}
                 src={photos[selectedIndex]}
-                alt={`Baby photo ${selectedIndex + 1}`}
+                alt={`Foto del bebé ${selectedIndex + 1}`}
                 className="max-w-[90vw] max-h-[85vh] object-contain rounded-lg shadow-2xl"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}

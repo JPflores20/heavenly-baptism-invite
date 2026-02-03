@@ -57,6 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Baptism theme custom colors
+        sky: {
+          light: "hsl(var(--sky-light))",
+          DEFAULT: "hsl(var(--sky-medium))",
+          deep: "hsl(var(--sky-deep))",
+        },
+        silver: {
+          light: "hsl(var(--silver-light))",
+          DEFAULT: "hsl(var(--silver))",
+        },
+        cream: "hsl(var(--cream))",
+        dove: "hsl(var(--dove-white))",
+        charcoal: "hsl(var(--charcoal))",
       },
       borderRadius: {
         lg: "var(--radius)",
